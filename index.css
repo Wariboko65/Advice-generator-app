@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background: hsl(218, 23%, 16%);
+  color: hsl(150, 100%, 66%);
+}
+
+*::selection {
+  background: hsl(218, 23%, 16%);
+  color: hsl(150, 100%, 66%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  height: 100dvh;
+  background-color: hsl(218, 23%, 16%);
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  height: 100%;
+  max-height: 100%;
+}
+body main div.advice-card {
+  width: 90%;
+  padding: 30px 30px 50px 30px;
+  margin-block-end: 50px;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 5px 30px 0 hsla(0, 0%, 0%, 0.4);
+  background-color: hsl(217, 19%, 24%);
+}
+body main div.advice-card p.id {
+  color: hsl(150, 100%, 66%);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+body main div.advice-card p.advice {
+  color: hsl(193, 38%, 86%);
+  font-weight: 800;
+  font-size: 28px;
+}
+body main div.advice-card p.advice span {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  position: relative;
+}
+body main div.advice-card p.advice span::before,
+body main div.advice-card p.advice span::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.4) inset;
+  width: 30px;
+  border-radius: 50%;
+}
+body main div.advice-card p.advice span::before {
+  left: 0;
+  z-index: 3;
+  animation: neonn 1.5s infinite linear;
+  background-color: hsl(150, 100%, 66%);
+}
+body main div.advice-card p.advice span::after {
+  z-index: 2;
+  isolation: isolate;
+  right: 0;
+  animation: cyann 1.5s infinite linear;
+  background-color: hsl(193, 38%, 86%);
+}
+@keyframes neonn {
+  50% {
+    left: 60%;
+    z-index: 3;
+  }
+  100% {
+    left: 0;
+    z-index: 1;
+  }
+}
+@keyframes cyann {
+  50% {
+    right: 60%;
+  }
+  100% {
+    right: 0;
+  }
+}
+body main div.advice-card img.desktop {
+  display: none;
+}
+body main div.advice-card img {
+  width: 100%;
+  padding-inline: 10px;
+}
+body main div.advice-card img,
+body main div.advice-card button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+body main div.advice-card button {
+  position: absolute;
+  bottom: -26px;
+  width: 50px;
+  height: 50px;
+  transform: translatex(-50%);
+  left: 50%;
+  border-radius: 50%;
+  background: hsl(150, 100%, 66%);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s box-shadow;
+}
+body main div.advice-card button:hover {
+  box-shadow: 0 0 30px 0 hsl(150, 100%, 66%);
+}
+body main .attribution {
+  color: hsl(193, 38%, 86%);
+  text-align: center;
+  margin-inline: 5%;
+}
+body main .attribution a {
+  color: hsl(150, 100%, 66%);
+}
+
+@media screen and (min-width: 700px) {
+  body main div.advice-card {
+    width: min(40%, 400px);
+  }
+  body main div.advice-card img.desktop {
+    display: block;
+  }
+  body main div.advice-card img.moblie {
+    display: none;
+  }
+}/*# sourceMappingURL=index.css.map */
