@@ -2,14 +2,14 @@
 
 This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-### Screenshot
+### Desktop View
 
 ![](./images/advice.png)
 
 ### Links
 
-- Solution URL: [solution Page on Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Live Site URL](https://your-live-site-url.com)
+- Solution URL: [solution Page on Frontend Mentor](https://www.frontendmentor.io/solutions/advice-generator-app-LQ_ph2yOt2)
+- Live Site URL: [Live Site URL](https://advice-generator-app-seven-sooty.vercel.app/)
 
 ### Built with
 
