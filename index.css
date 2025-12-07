@@ -15,7 +15,7 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   height: 100dvh;
   background-color: hsl(218, 23%, 16%);
 }
@@ -24,52 +24,54 @@ body main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0px;
-  height: 100%;
-  max-height: 100%;
+  gap: 0;
+  min-height: 100%;
 }
 body main div.advice-card {
   width: 90%;
-  padding: 30px 30px 50px 30px;
-  margin-block-end: 50px;
+  padding: 1.875rem 1.875rem 3.125rem 1.875rem;
+  margin-block-end: 3.125rem;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 0.9375rem;
   position: relative;
   box-shadow: 0 5px 30px 0 hsla(0, 0%, 0%, 0.4);
   background-color: hsl(217, 19%, 24%);
+  
 }
-body main div.advice-card p.id {
+body main div.advice-card p#id {
   color: hsl(150, 100%, 66%);
-  font-size: 12px;
+  font-size: 1rem;
+  font-weight: bold;
   letter-spacing: 1px;
 }
-body main div.advice-card p.advice {
+body main div.advice-card p#advice {
   color: hsl(193, 38%, 86%);
   font-weight: 800;
-  font-size: 28px;
+  font-size: 1.75rem;
+  min-height: 6.25rem;
 }
-body main div.advice-card p.advice span {
+body main div.advice-card p#advice span {
   display: inline-block;
-  width: 70px;
-  height: 30px;
+  width: 4.375rem;
+  height: 1.875rem;
   position: relative;
 }
-body main div.advice-card p.advice span::before,
-body main div.advice-card p.advice span::after {
+body main div.advice-card p#advice span::before,
+body main div.advice-card p#advice span::after {
   content: "";
   position: absolute;
-  height: 30px;
+  height: 1.875rem;
   box-shadow: 0 5px 15px 0 hsla(0, 0%, 0%, 0.4) inset;
-  width: 30px;
+  width: 1.875rem;
   border-radius: 50%;
 }
-body main div.advice-card p.advice span::before {
+body main div.advice-card p#advice span::before {
   left: 0;
   z-index: 3;
   animation: neonn 1.5s infinite linear;
   background-color: hsl(150, 100%, 66%);
 }
-body main div.advice-card p.advice span::after {
+body main div.advice-card p#advice span::after {
   z-index: 2;
   isolation: isolate;
   right: 0;
@@ -99,7 +101,7 @@ body main div.advice-card img.desktop {
 }
 body main div.advice-card img {
   width: 100%;
-  padding-inline: 10px;
+  padding-inline: 0.625rem;
 }
 body main div.advice-card img,
 body main div.advice-card button {
@@ -109,9 +111,9 @@ body main div.advice-card button {
 }
 body main div.advice-card button {
   position: absolute;
-  bottom: -26px;
-  width: 50px;
-  height: 50px;
+  bottom: -1.625rem;
+  width: 3.125rem;
+  height: 3.125rem;
   transform: translatex(-50%);
   left: 50%;
   border-radius: 50%;
